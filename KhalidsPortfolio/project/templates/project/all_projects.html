@@ -1,0 +1,25 @@
+{% extends 'main/base.html' %}
+
+{% block title %}All Projects{% endblock %}
+
+{% block content %}
+<div class="container1">
+    <h3>All Projects</h3>
+        <div class="row">
+            {% for project in projects %}
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.title }}">
+                        <div class="card-body">
+                            <a href="{% url 'project:detail_project_view' project.id %}"><h5 class="card-title">{{ project.title }}</h5></a>
+                            <p class="card-text">Technologies Used: {{ project.technology_use }}</p>
+                            <p class="card-text">
+                            <small class="text-muted">Date Created: {{ project.date_created|date:"F j, Y" }}</small>
+                                
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+    </div>
+</div>
+{% endblock %}

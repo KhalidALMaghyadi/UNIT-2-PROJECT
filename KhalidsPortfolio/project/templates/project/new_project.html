@@ -1,0 +1,52 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Add New Project{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-edits">Add New Project</h2>
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <form action="{% url 'project:new_add_view' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <div class="form-group mb-3">
+                <label for="title">Project Title</label>
+                <input type="text" class="form-control" id="title" name="title" required>
+            </div>
+            
+            <div class="form-group mb-3">
+                <label for="description">Description</label>
+                <textarea class="form-control" id="description" name="description" rows="6" required></textarea>
+            </div>
+            
+            <div class="form-group mb-3">
+                <label for="technology_use">Technologies Used</label>
+                <input type="text" class="form-control" id="technology_use" name="technology_use" required>
+            </div>  
+            
+            <div class="form-group mb-3">
+                <label for="status" class="form-label">Status</label>
+                <select class="form-control" id="status" name="status" required>
+                    <option value="" disabled selected>Select Status</option>
+                    <option value="Done">Done</option>
+                    <option value="inprogress">In Progress</option>
+                    <option value="notstarted">Not Started</option>
+                    <option value="fail">Fail</option>
+                </select>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="image">Project Image</label>
+                <input type="file" class="form-control" id="image" name="image" accept="image/*">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="date_created">Date Created</label>
+                <input type="date" class="form-control" id="date_created" name="date_created" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Add Project</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
