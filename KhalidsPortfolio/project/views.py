@@ -31,14 +31,6 @@ def detail_project_view(request : HttpRequest , project_id):
 
 
 
-# راح ارجعلها 
-def delete_project_view(request: HttpRequest,project_id):
-    
-    project= Project.objects.get(pk=project_id)
-
-    project.delete()
-
-    return render(request,  )
 
 def update_project_view(request : HttpRequest ,project_id):
 
@@ -60,3 +52,13 @@ def update_project_view(request : HttpRequest ,project_id):
         project.save()
         return redirect('project:detail_project_view', project_id=project.id)
     return render (request , 'project/update_project.html', {"project":project})
+
+
+# راح ارجعلها 
+def delete_project_view(request: HttpRequest,project_id):
+    
+    project= Project.objects.get(pk=project_id)
+
+    project.delete()
+
+    return redirect('dashboard:dashboard_view')

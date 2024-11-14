@@ -3,7 +3,7 @@
 {% block title %}New Blog Post{% endblock %}
 
 {% block content %}
-<div class="container mt-5">
+<div class="container2 my-3">
     <h2>Add New Blog Post</h2>
     <form action="{% url 'blog:new_blog_view' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
@@ -28,7 +28,7 @@
             <input type="file" class="form-control" id="featured_image" name="featured_image" accept="image/*">
         </div>
 
-        <button type="submit" class="btn btn-primary">Add Blog Post</button>
+        <button type="submit" class="btn btn-primary mb-3">Add Blog Post</button>
     </form>
 </div>
 {% endblock %}

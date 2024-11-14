@@ -15,7 +15,7 @@
 
 .navbar-nav .nav-link {
     color: white;
-    transition: color 0.3s;
+    transition: color 0.2s;
 }
 
 .navbar-nav .nav-link:hover {
@@ -72,6 +72,7 @@
     background-color: #f5f5f5; 
     padding: 15px;
     border-top: 1px solid #ddd; 
+    
 }
 
 .footer .container {
@@ -119,7 +120,7 @@
 .text-edits h2:hover {
     color: #1d5caf ; 
 }
-
+/*--------------------------------*/
 /* Style for the project page */
 .container1 {
     max-width: 1200px;
@@ -132,10 +133,6 @@
     object-fit: cover; 
     border-radius: 8px; 
     width: 100%;
-}
-.container2 {
-    max-width: 600px;
-    margin: auto;
 }
 
 h2 {
@@ -150,10 +147,205 @@ h2 {
 
 .current-image {
     max-width: 100%;
-    width: 200px; /* Set the image width */
-    height: auto; /* Maintain aspect ratio */
+    width: 200px; 
+    height: auto; 
     display: block;
     margin-top: 5px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+/*---------------------*/
+/* Style Blog page  */
+.container2 {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f8f9fa; 
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+h2 {
+    text-align: center;
+    color: #1d5caf;
+    margin-bottom: 20px;
+}
+
+
+.form-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.btn-primary {
+    background-color: #1d5caf;
+    border-color: #1d5caf;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #154f91;
+    border-color: #154f91;
+}
+
+.container21 {
+    max-width: 600px;      
+    margin: auto;           
+    padding: 30px;          
+    background-color: #f8f9fa; 
+    border-radius: 8px;     
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+
+h2 {
+    text-align: center;
+    color: #1d5caf;
+    margin-bottom: 20px;
+}
+
+
+.form-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+
+.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+.btn-primary {
+    background-color: #1d5caf;
+    border-color: #1d5caf;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #154f91;
+    border-color: #154f91;
+}
+
+/*------------------------*/ 
+
+/* dashboard page */ 
+.dashboard-container {
+    display: flex;
+    min-height: 90vh;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    display: flex;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.1s ease;
+    border-radius: 4px;
+}
+
+.sidebar a:hover {
+    background-color: #1d5caf; 
+    color: white; 
+}
+
+.sidebar a.active {
+    background-color: #1d5caf; 
+    color: white;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;  
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    width: 200px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.items-table {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.item-card {
+    width: 250px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-actions a {
+    display: flex;
+    flex-direction: column; 
+    gap: 5px; 
+}
+
+.card-actions .btn {
+    text-align: left; 
+    padding: 5px 10px;
+    border: none;
+    background: none;
+    color: inherit;
+}
+
+.card-actions .view-btn {
+    color: #007bff; 
+}
+
+.card-actions .edit-btn {
+    color: #28a745; 
+}
+
+.card-actions .delete-btn {
+    color: #dc3545; 
 }

@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% block title %}{{ blog.title }}{% endblock %}
+
+{% block content %}
+
+<!--- يحتاج تعديل في الشكل -->
+<div class="container mt-5">
+    <h2>{{ blog.title }}</h2>
+    <p><small class="text-muted">Published on: {{ blog.published_date|date:"F j, Y" }}</small></p>
+    <img src="{{ blog.featured_image.url }}" alt="{{ blog.title }}" class="img-fluid mb-3">
+    
+
+    <p>{{ blog.content }}</p>
+</div>
+{% endblock %}

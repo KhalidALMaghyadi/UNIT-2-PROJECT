@@ -4,7 +4,7 @@
 
 {% block content %}
 {%load static%}
-<div class="container2 mt-5">
+<div class="container1 my-3">
     <h2>Update Project</h2>
     <form method="post" action="{% url 'project:update_project_view' project.id %}" enctype="multipart/form-data">
         {% csrf_token %}

@@ -1,0 +1,51 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+    <div class="sidebar">
+        <ul>
+            <li><a href="?section=projects" {% if section == 'projects' %}class="active"{% endif %}>Projects</a></li>
+            <li><a href="?section=blogs" {% if section == 'blogs' %}class="active"{% endif %}>Blogs</a></li>
+        </ul>
+    </div>
+    
+    <div class="content">
+        
+        <h2 class="text-sm-start ">Manage {{ section|title }}</h2>
+        
+        <div class="header-controls">
+            <div class="button-group d-flex">
+                <a href="{% url 'project:new_add_view' %}" class="btn btn-primary" {% if section == "projects" %}style="display:inline;"{% else %}style="display:none;"{% endif %}>
+                    + New Project
+                </a>
+                <a href="{% url 'blog:new_blog_view' %}" class="btn btn-primary" {% if section == "blogs" %}style="display:inline;"{% else %}style="display:none;"{% endif %}>
+                    + New Blog
+                </a>
+            </div>
+            <input type="text" placeholder="Search {{ section|title }}" class="search-bar">
+        </div>
+        
+        <div class="items-table">
+            {% for item in items %}
+                <div class="item-card">
+                    <h4>{{ item.title }}</h4>
+                    <p>{{ item.description}}</p>
+                    <div class="card-actions">
+                        {% if section == "projects" %}
+                            <a href="{% url 'project:detail_project_view' item.id %}" class="btn view-btn">View</a>
+                            <a href="{% url 'project:update_project_view' item.id %}" class="btn edit-btn">Edit</a>
+                            <a href="{% url 'project:delete_project_view' item.id %}" class="btn delete-btn">Delete</a>
+                        {% elif section == "blogs" %}
+                            <a href="{% url 'blog:blog_detail_view' item.id %}" class="btn view-btn">View</a>
+                            <a href="{% url 'blog:update_blog_view' item.id %}" class="btn edit-btn">Edit</a>
+                            <a href="{% url 'blog:delete_blog_view' item.id %}" class="btn delete-btn">Delete</a>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
