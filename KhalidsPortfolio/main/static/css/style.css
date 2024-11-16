@@ -22,25 +22,14 @@
     color: #1d5caf;
 }
 
+/* Style: Home Page */
+/*-----------section1------------------*/
 .content-section {
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
-.image-content {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.profile-image {
-    width: 100%; 
-    max-width: 600px; 
-    height: auto; 
-}
-
 .text-content-home h3 {
     font-family: 'Playfair Display', serif;
     font-size: 2.5em;
@@ -65,9 +54,91 @@
 .text-content-home p:hover {
     color: #1d5caf;
 }
+.short-bio {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    color: #6c757d;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-image {
+    width: 100%; 
+    max-width: 600px; 
+    height: auto; 
+}
+/*----------section2--------------------------*/
+.blogs-grid {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: row; /* Align cards vertically */
+    gap: 20px; /* Space between the cards */
+    align-items: center; /* Center the cards horizontally */
+    width: 100%; /* Full width container */
+}
+
+.blog-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 80%; /* Adjust the card width to look centered */
+    max-width: 500px; /* Set a maximum width for consistency */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(173, 216, 230, 0.8); /* Baby blue hover shadow */
+}
+
+.blog-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistent card sizes */
+    object-fit: cover; /* Ensures the image scales properly without distortion */
+    border-bottom: 1px solid #ddd;
+}
+
+.blog-card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.blog-card-content h6 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.blog-card-content p {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.blog-card-content .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.blog-card-content .btn:hover {
+    background-color: #0056b3;
+}
 
 
-
+/* Style Footer */
 .footer {
     background-color: #f5f5f5; 
     padding: 15px;
@@ -122,56 +193,198 @@
 }
 /*--------------------------------*/
 /* Style for the project page */
-.container1 {
-    max-width: 1200px;
-    margin: auto;
-}
 
-
-.card-img-top {
-    height: 250px; 
-    object-fit: cover; 
-    border-radius: 8px; 
-    width: 100%;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #1d5caf;
-}
-
-.form-group label {
-    font-weight: bold;
-}
-
-.current-image {
-    max-width: 100%;
-    width: 200px; 
-    height: auto; 
-    display: block;
-    margin-top: 5px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
 /*---------------------*/
 /* Style Blog page  */
-.container2 {
-    max-width: 600px;
+
+.blogs-grid-container {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa; /* Subtle background color */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align content horizontally */
+}
+
+.text-all-blog {
+    text-align: center; /* Center text */
+    font-size: 24px; /* Adjust the font size */
+    font-weight: bold; /* Make it stand out */
+    margin: 20px 0; /* Space above and below the text */
+    color: #1d5caf; /* Baby blue color to match the design */
+}
+
+.blogs-grid {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    gap: 20px; /* Space between cards */
+    width: 100%; /* Full width of the container */
+    align-items: center; /* Center align the cards */
+}
+
+.blog-card {
+    background: #ffffff; /* White background for the card */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 8px 20px rgba(173, 216, 230, 0.8); /* Baby blue shadow */
+    overflow: hidden; /* Ensure content fits within the card */
+    width: 100%; /* Full width for responsive design */
+    max-width: 600px; /* Limit maximum width */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.blog-image {
+    width: 100%;
+    height: auto;
+    max-height: 250px; /* Consistent height */
+    object-fit: cover; /* Ensure proper scaling */
+}
+
+.blog-card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.blog-card-content h6 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.blog-card-content p {
+    font-size: 14px;
+    color: #6c757d;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.blog-card-content .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.blog-card-content .btn:hover {
+    background-color: #0056b3;
+}    
+/*----------------------*/
+/* detail Page */
+.blog-detail-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    max-width: 1200px;
     margin: auto;
     padding: 20px;
-    background-color: #f8f9fa; 
+}
+
+.blog-image-container {
+    flex: 1;
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog-image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
     border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    text-align: center;
+.blog-content {
+    flex: 2;
+    max-width: 55%; 
+    text-align: left;
+    padding: 10px 20px;
+}
+
+.blog-content h1 {
+    font-size: 32px;
     color: #1d5caf;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.blog-published-date {
+    font-size: 14px;
+    color: #6c757d;
     margin-bottom: 20px;
 }
 
+.blog-body {
+    line-height: 1.8;
+    color: #444;
+    font-size: 16px;
+}
 
+.related-blogs-title {
+    font-size: 24px;
+    text-align: center;
+    color: #007bff;
+    border-top: 2px solid #ddd;
+    margin: 40px 0 30px; 
+}
+
+.related-blogs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+
+}
+
+.related-blog-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.related-blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(173, 216, 230, 0.8);
+}
+
+.related-blog-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.related-blog-card .btn {
+    background-color: #1d5caf;
+    color: white;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.related-blog-card .btn:hover {
+    background-color: #0056b3;
+}
+
+
+/*--------------------*/
+/*update pages for project and blog */
 .form-group label {
     font-weight: bold;
     color: #333;
@@ -198,53 +411,59 @@ h2 {
     background-color: #154f91;
     border-color: #154f91;
 }
-
-.container21 {
-    max-width: 600px;      
-    margin: auto;           
-    padding: 30px;          
-    background-color: #f8f9fa; 
-    border-radius: 8px;     
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+/*---------------------*/
+/* General Update Form Container */
+.update-form-container {
+    max-width: 600px;
+    margin: 40px auto; /* Add space at the top and bottom */
+    padding: 30px;
+    background-color: #f8f9fa; /* Light gray background */
+    border-radius: 5px; /* Slightly rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
-
-
-h2 {
-    text-align: center;
-    color: #1d5caf;
-    margin-bottom: 20px;
-}
-
-
-.form-group label {
+/* Form Field Labels */
+.update-form-container label {
     font-weight: bold;
-    color: #333;
+    margin-bottom: 5px;
+    display: block;
+    color: #333; /* Dark gray for labels */
 }
 
-
-.form-control {
-    border: 1px solid #ced4da;
-    border-radius: 5px;
+/* Form Fields */
+.update-form-container .form-control {
+    border: 1px solid #ced4da; /* Subtle border */
+    border-radius: 4px; /* Consistent corner rounding */
     padding: 10px;
+    font-size: 14px;
+    margin-bottom: 15px;
 }
 
-
-.btn-primary {
+/* Button Styling */
+.update-form-container .btn-primary {
     background-color: #1d5caf;
     border-color: #1d5caf;
     width: 100%;
-    padding: 10px;
+    padding: 10px 15px;
     font-size: 16px;
     font-weight: bold;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.btn-primary:hover {
-    background-color: #154f91;
-    border-color: #154f91;
+.update-form-container .btn-primary:hover {
+    background-color: #154f91; /* Darker shade on hover */
+    transform: translateY(-2px); /* Subtle hover effect */
 }
 
+/* Image Preview */
+.update-form-container .current-image {
+    width: 100%;
+    max-width: 200px; /* Consistent size for images */
+    height: auto;
+    display: block;
+    margin-top: 10px;
+    border-radius: 4px; /* Match input field rounding */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
 /*------------------------*/ 
 
 /* dashboard page */ 
@@ -305,7 +524,11 @@ h2 {
     border-radius: 4px;
     border: 1px solid #ccc;
 }
-
+h4 {
+    text-align: center;
+    color: #1d5caf;
+    margin-bottom: 20px;
+}
 .items-table {
     display: flex;
     flex-wrap: wrap;
@@ -348,4 +571,78 @@ h2 {
 
 .card-actions .delete-btn {
     color: #dc3545; 
+}
+
+/*Styel-contact-app-messages:*/
+
+.message-success {
+    background-color: #28a745; 
+    color: white; 
+    padding: 10px 15px; /* Space inside the message box */
+    margin-bottom: 10px; /* Space between messages */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 1px solid #1e7e34; /* Slightly darker green border */
+}
+
+.btnsend{
+    padding: 12px 24px; 
+    font-size: 16px;    
+    border-radius: 5px; 
+    width: 50%;
+    
+}
+
+.alert-success {
+    animation: fadeOut 7s forwards; 
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+
+.table-primary th {
+    background-color: #5d93d9; 
+    color: #ffffff;            
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.table td {
+    padding: 10px;
+    border-bottom: 1px solid #dddddd; /* Light gray border for rows */
+    text-align: center;               /* Center align all cells */
+}
+
+/* Adjusted Styles for Table Header and Cells */
+.table th, .table td {
+    border-bottom: 1px solid #dddddd;
+    padding: 10px;
+}
+
+/* Align table actions (like buttons) */
+.table td.actions {
+    text-align: center;
+}
+
+.table .no-data-row {
+    background-color: #f8f9fa; /* Light gray for empty data row */
+    font-style: italic;
+    color: #6c757d;
 }

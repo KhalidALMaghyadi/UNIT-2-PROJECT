@@ -20,7 +20,13 @@ def all_blogs_view(request : HttpRequest):
 def blog_detail_view(request : HttpRequest , blog_id):
     
     blog = Blog.objects.get(pk=blog_id)
-    return render(request, 'blog/blog_detail.html', {'blog': blog})
+    related_blogs = Blog.objects.all()[:4]  
+    context = {
+        'blog': blog,
+        'related_blogs': related_blogs,
+    }
+    return render(request, 'blog/blog_detail.html', context)
+    # return render(request, 'blog/blog_detail.html', {'blog': blog})
 
      
 

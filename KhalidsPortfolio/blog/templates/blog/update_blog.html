@@ -3,26 +3,33 @@
 {% block title %}Edit Blog Post{% endblock %}
 
 {% block content %}
-<div class="container21 my-5">
+<div class="update-form-container">
     <h2>Edit Blog Post</h2>
     <form method="post" action="{% url 'blog:update_blog_view' blog.id %}" enctype="multipart/form-data">
         {% csrf_token %}
-
         
-        <div class="form-group mb-3">
+        <!-- Blog Title -->
+        <div class="form-group">
             <label for="title">Title</label>
             <input type="text" class="form-control" id="title" name="title" value="{{ blog.title }}" required>
         </div>
 
-        <div class="form-group mb-3">
+        <!-- Blog Content -->
+        <div class="form-group">
             <label for="content">Content</label>
             <textarea class="form-control" id="content" name="content" rows="6" required>{{ blog.content }}</textarea>
         </div>
 
-        <div class="form-group mb-3">
+        <!-- Featured Image -->
+        <div class="form-group">
             <label for="featured_image">Featured Image</label>
             <input type="file" class="form-control" id="featured_image" name="featured_image">
-            <p>Current Image: <img src="{{ blog.featured_image.url }}" style="max-width: 150px; margin-top: 10px;"></p>
+            {% if blog.featured_image %}
+                <div>
+                    <p>Current Image:</p>
+                    <img src="{{ blog.featured_image.url }}" alt="{{ blog.title }}" class="current-image">
+                </div>
+            {% endif %}
         </div>
 
         <button type="submit" class="btn btn-primary">Update Blog Post</button>

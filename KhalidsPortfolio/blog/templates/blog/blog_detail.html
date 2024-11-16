@@ -3,14 +3,34 @@
 {% block title %}{{ blog.title }}{% endblock %}
 
 {% block content %}
-
-<!--- يحتاج تعديل في الشكل -->
-<div class="container mt-5">
-    <h2>{{ blog.title }}</h2>
-    <p><small class="text-muted">Published on: {{ blog.published_date|date:"F j, Y" }}</small></p>
-    <img src="{{ blog.featured_image.url }}" alt="{{ blog.title }}" class="img-fluid mb-3">
+<div style="min-height: 90vh;">
+    <div class="blog-detail-container">
+        <!-- Blog Image -->
+        <div class="blog-image-container">
+            <img src="{{ blog.featured_image.url }}" alt="Blog Image" class="blog-image">
+        </div>
     
-
-    <p>{{ blog.content }}</p>
+        <!-- Blog Content -->
+        <div class="blog-content">
+            <h1>{{ blog.title }}</h1>
+            <p class="blog-published-date">Published on: {{ blog.published_date|date:"F d, Y, H:i" }}</p>
+            <div class="blog-body">
+                {{ blog.content|linebreaks }}
+            </div>
+        </div>
+    </div>
+    
+    <!-- Related Blogs Section -->
+    <h3 class="related-blogs-title">Related Blogs</h3>
+    <div class="related-blogs-container">
+        {% for related_blog in related_blogs %}
+        <div class="related-blog-card">
+            <img src="{{ related_blog.featured_image.url }}" alt="Related Blog Image" class="related-blog-image">
+            <h6>{{ related_blog.title }}</h6>
+            <p>{{ related_blog.content|truncatechars:100 }}</p>
+            <a href="{% url 'blog:blog_detail_view' related_blog.id %}" class="btn">Read More</a>
+        </div>
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}
