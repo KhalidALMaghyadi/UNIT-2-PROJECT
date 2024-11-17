@@ -5,7 +5,6 @@ app_name = "main"
 
 urlpatterns = [
     path('', views.home_view, name='home_view'),
-    # path('contact/', views.contact_view, name='contact_view'),
-    # path('contact/messages/' ,views.contact_messages , name='contact_messages'),
-    # path('delete/<con_id>/con' , views.det_view, name="det_view"),
+    path('about/me/', views.about_me_view, name='about_me_view'),
+    path('resume/' ,views.resume_view , name='resume_view'),
 ]

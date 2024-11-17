@@ -5,12 +5,10 @@
 {% block content %}
 <div style="min-height: 90vh;">
     <div class="blog-detail-container">
-        <!-- Blog Image -->
         <div class="blog-image-container">
             <img src="{{ blog.featured_image.url }}" alt="Blog Image" class="blog-image">
         </div>
     
-        <!-- Blog Content -->
         <div class="blog-content">
             <h1>{{ blog.title }}</h1>
             <p class="blog-published-date">Published on: {{ blog.published_date|date:"F d, Y, H:i" }}</p>
@@ -20,7 +18,7 @@
         </div>
     </div>
     
-    <!-- Related Blogs Section -->
+    
     <h3 class="related-blogs-title">Related Blogs</h3>
     <div class="related-blogs-container">
         {% for related_blog in related_blogs %}

@@ -35,10 +35,28 @@ A personal website is website that represents you , your work , your career , yo
 - UML (shared as a link or uploaded as a file) - You can use Lucid Charts or similar online UML design tool.
 
 ## (Project Name)
-(project description here.)
+(Khalid Porfolio)
 
 ## Features List
-- (list of features)
+- User-Friendly Interface:
+A simple and intuitive design ensures seamless navigation for all users.
+
+Dynamic Project Management:
+Easily add, update, delete, and view projects with an organized and responsive layout.
+
+Responsive Design:
+Fully optimized for desktop, tablet, and mobile devices to deliver a consistent experience.
+
+Modern Fonts with Google:
+Integrated Google Fonts like Roboto and Playfair Display for a professional and clean appearance.
+Email Integration:
+Send inquiries directly to the admin's email using Django's send_mail functionality.
+
+User Notifications:
+Display alerts and confirmations using Django's messages framework to keep users informed.
+Interactive Cards:
+Engaging hover effects and transitions make the interface visually appealing and modern.
+
 
 ## User Stories, Wireframes & UML links
 - (User stories document link here.)

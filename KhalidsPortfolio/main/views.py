@@ -6,6 +6,13 @@ from blog.models import Blog
 
 
 def home_view(request:HttpRequest):
-    blogs = Blog.objects.all()[:2] 
     
-    return render (request , 'main/home.html' , {'blogs': blogs})   
+    return render (request , 'main/home.html')   
+
+
+def about_me_view(request:HttpRequest):
+    return render (request , 'main/about_me.html')
+
+
+def resume_view(request:HttpRequest):
+    return render (request , 'main/resume.html')
