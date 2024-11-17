@@ -335,18 +335,66 @@
 }
 
 /*---------------------------------*/
-/*Add new project */
-.text-edits h2{
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5em;
-    font-weight: 700;
-    color: #6c757d; 
-    transition: color 0.3s ease-in-out; 
+/*Style new project and new blog */
+
+.form-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
 }
 
-.text-edits h2:hover {
-    color: #1d5caf ; 
+.form-page h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    color: #1d5caf;
+    margin-bottom: 30px;
 }
+
+.form-page form {
+    max-width: 600px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-page .form-group {
+    margin-bottom: 20px;
+}
+
+.form-page .form-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-page .form-control {
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.form-page .btn-primary {
+    background-color: #1d5caf;
+    border-color: #1d5caf;
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.form-page .btn-primary:hover {
+    background-color: #154f91;
+    transform: translateY(-2px);
+}
+
+
 /*--------------------------------*/
 /* Style for the project page */
 .projects-wrapper {

@@ -36,6 +36,8 @@
                     {% if section == "projects" or section == "blogs" %}
                         <h4>{{ item.title }}</h4>
                         <p>{{ item.description|truncatewords:10 }}</p>
+                        <p>{{ item.content|truncatewords:10 }}</p>
+                        
                     {% elif section == "contacts" %}
                         <h4>{{ item.name }}</h4>
                         <p>Email: {{ item.email }}</p>
