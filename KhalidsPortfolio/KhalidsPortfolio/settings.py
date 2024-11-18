@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-$zr$7=dc48oo8=-$fr#(1l$5(uq9c*tuuri5xud+l5uy4296@_
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-
+CSRF_TRUSTED_ORIGINS =["https://khalidportfolio.up.railway.app", "http://127.0.0.1" ]
 
 # Application definition
 
